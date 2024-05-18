@@ -1,14 +1,15 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Stack from '@mui/material/Stack';
 import { Button } from '@mui/joy';
+import { Fade } from 'react-awesome-reveal';
 
 const Contador = () => {
     const [count, setCount] = useState(0)
 
     return (
-        <>
+        <Fade cascade>
             <Stack gap={2}>
                 <Button disabled>{count}</Button>
                 <Button
@@ -24,7 +25,7 @@ const Contador = () => {
                     <RemoveIcon />
                 </Button>
             </Stack>
-        </>
+        </Fade>
 
     )
 }
